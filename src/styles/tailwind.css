@@ -111,3 +111,66 @@ li:hover{
   justify-content: space-between;
 }
 
+.feature-card {
+  position: relative;
+  background: linear-gradient(90deg, #fff, #add8e6, #00f, #add8e6, #fff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  overflow: hidden;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(90deg, #fff, #87CEEB, #00f, #87CEEB, #fff);
+  }
+
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+
+  .title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .title,
+  .subtitle {
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .description {
+    margin-bottom: 10px;
+  }
+
+  .button-section {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .feature-button {
+    background-color: #87CEEB;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+

@@ -54,5 +54,6 @@
 --black_900_33:#06070a33; 
 --white_A700_02:#ffffff02; 
 --light_blue_500_4c:#009dff4c; 
---blue_400:#55a3ff; 
+--blue_400:#45f3ff; 
+--linear: linear-gradient(90deg, rgba(9, 6, 65, 0.53) 62%, rgba(36, 36, 36, 0.1) 78%, rgba(1,3,24,0.5804446778711485) 91%);
 }

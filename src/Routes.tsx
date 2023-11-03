@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
+import Createtokenliquidgeneratortoken from "pages/Createtokenliquidgeneratortoken";
 const Forumcodexpullrequestmessage = React.lazy(
   () => import("pages/Forumcodexpullrequestmessage"),
 );
@@ -169,8 +170,11 @@ const Mytokenreadcontractdefault = React.lazy(
 const Createtokensuccescreatetoken = React.lazy(
   () => import("pages/Createtokensuccescreatetoken"),
 );
-const Createtokenliquidgeneratortoken = React.lazy(
+const CreatetokenliquidgeneratortokenPage = React.lazy(
   () => import("pages/Createtokenliquidgeneratortoken"),
+);
+const TokenList = React.lazy(
+  () => import("pages/Createtokenliquidgeneratortoken/MyToken"),
 );
 const Createtokenpageselectblockchain = React.lazy(
   () => import("pages/Createtokenpageselectblockchain"),
@@ -179,6 +183,8 @@ const CreateProjectRight = React.lazy(() => import("pages/CreateProjectRight"));
 const DAOselecttesnet = React.lazy(() => import("pages/DAOselecttesnet"));
 const DAOHOMEGENERATOR = React.lazy(() => import("pages/DAOHOMEGENERATOR"));
 const Homepagecodexapp = React.lazy(() => import("pages/Homepagecodexapp"));
+const Tokengenerator = React.lazy(() => import("pages/Homepagecodexapp/tokengeneratorICP"));
+
 const Launchpadloading = React.lazy(() => import("pages/Launchpadloading"));
 const Launchpadresult = React.lazy(() => import("pages/Launchpadresult"));
 const Launchpadchoosewallet = React.lazy(
@@ -186,16 +192,35 @@ const Launchpadchoosewallet = React.lazy(
 );
 const Launchpad = React.lazy(() => import("pages/Launchpad"));
 const Createtokenhomepage = React.lazy(
-  () => import("pages/Createtokenhomepage"),
-);
+  () => import("pages/Createtokenhomepage"),);
+  const HomeICP = React.lazy(() => import("pages/Homepagecodexapp/indexICP"));
+  const HomeMeta = React.lazy(() => import("pages/Homepagecodexapp/indexmask"));
+  const NFTERC = React.lazy(() => import("pages/Homepagecodexapp/NFTgeneraotrERC"));
+  const NFTICP = React.lazy(() => import("pages/Homepagecodexapp/NFTgeneratorICP"));
+  const SCgenERC = React.lazy(() => import("pages/Homepagecodexapp/SmartContractgenERC"));
+  const SCgenICP = React.lazy(() => import("pages/Homepagecodexapp/SmartContractgenICP"));
+  const TokengeneratorERC = React.lazy(() => import("pages/Homepagecodexapp/tokengeneratorERC"));
+  const TokengeneratorICP = React.lazy(() => import("pages/Homepagecodexapp/tokengeneratorICP"));
+
+
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<>Loading...</>}>
       <Router>
         <Routes>
-          <Route path="/" element={<Createtokenhomepage />} />
+
+        <Route path="/" element={<Homepagecodexapp />} />
+        <Route path="/homeICP" element={<HomeICP />} />
+        <Route path="/homeMeta" element={<HomeMeta />} />
+        <Route path="/tokengeneratorICP" element={<TokengeneratorICP />} />
+        <Route path="/tokengeneratorERC" element={<TokengeneratorERC />} />
+
+
+        <Route path="/launchpad" element={<Launchpad />} />
+
+          <Route path="/CreateToken" element={<Createtokenhomepage />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/launchpad" element={<Launchpad />} />
+
           <Route
             path="/launchpadchoosewallet"
             element={<Launchpadchoosewallet />}
@@ -203,6 +228,8 @@ const ProjectRoutes = () => {
           <Route path="/launchpadresult" element={<Launchpadresult />} />
           <Route path="/launchpadloading" element={<Launchpadloading />} />
           <Route path="/homepagecodexapp" element={<Homepagecodexapp />} />
+          <Route path="/tokengenerator" element={<Tokengenerator />} />
+
           <Route path="/daohomegenerator" element={<DAOHOMEGENERATOR />} />
           <Route path="/daoselecttesnet" element={<DAOselecttesnet />} />
           <Route path="/createprojectright" element={<CreateProjectRight />} />
@@ -213,6 +240,10 @@ const ProjectRoutes = () => {
           <Route
             path="/createtokenliquidgeneratortoken"
             element={<Createtokenliquidgeneratortoken />}
+          />
+             <Route
+            path="/TokenList"
+            element={<TokenList />}
           />
           <Route
             path="/createtokensuccescreatetoken"

@@ -10,22 +10,12 @@ import Tokengenerator from "./tokengeneratorICP";
 import Modal from 'react-modal';
 Modal.setAppElement('#root'); // Set the root element for accessibility
 
-const HomepagecodexappPage: React.FC = () => {
+const HomeICP: React.FC = () => {
   const navigate = useNavigate();
 
 
   const handleNavigate = () => {
     navigate('/Tokengenerator'); // Assuming '/Tokengenerator' is the route you want to navigate to
-  };
-
-  const handleNavigate1 = () => {
-    navigate('/homeICP'); // Assuming '/Tokengenerator' is the route you want to navigate to
-  
-  
-  };
-
-  const handleNavigate2 = () => {
-    navigate('/homeMeta'); // Assuming '/Tokengenerator' is the route you want to navigate to
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,26 +35,26 @@ const HomepagecodexappPage: React.FC = () => {
   };
   const modalStyle = {
     overlay: {
-      backgroundColor: 'rgba(0, 0, 50, 0.15)', // Dark blue with 15% transparency
+      backgroundColor: 'rgba(0, 0, 0, 0.3)', // Dim background with a bit of transparency
       backdropFilter: 'blur(8px)', // Apply background blur
     },
     content: {
-      width: '300px',
-      height: '200px',
+      width: '250px',
+      height: '250px',
       margin: 'auto', // Center the modal
       background: 'transparent', // Transparent background
-      border: '2px solid lightblue', // Border color and width
+      border: '1px solid lightblue', // Border color and width
       borderRadius: '8px',
       padding: '20px',
-      display: 'grid',
-       gridTemplateColumns: 'center' ,
+      display: 'flex',
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center', // Center title and button
       color: 'white', // Text color
       fontSize: '24px', // Text size
       gap: '30px', // Space between title and button
       marginTop: '20px', // Space from top
-
+      
     },
   };
   
@@ -156,41 +146,11 @@ const HomepagecodexappPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex flex-row gap-8 items-start justify-start w-auto">
-  <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
-                        Connect
-                      </Button>
-
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-        style={modalStyle}
-
-      >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-
-        <h1>Select Network</h1>
-        
-        <Button className="capitalize cursor-pointer font-semibold min-w-[30px] py-[5px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" 
-        onClick={closeModal}>X</Button>
-
-        </div>
-        <div className="flex flex-row gap-8 items-start justify-start w-auto">
-          <button                 onClick={handleNavigate1}>
-
-            
-            <img      className="h-[63px]"
-src="images/icp.png" alt="ICP Logo" />
-          </button>
-       
-          <button                 onClick={handleNavigate2}>
-
+                    <button >
             
             <img                           className="h-[63px]"
-src="images/meta.png" alt="MetaMask Logo" />
-          </button>
-        </div>
-        </Modal>
+src="images/icp.png" alt="ICP Logo" />
+</button>
 
                     </div>
                   </div>
@@ -280,7 +240,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                
                 <div 
                 className="bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                onClick={openModal}>
+                onClick={handleNavigate}>
                
 
               
@@ -318,7 +278,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
                   
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Explore
                       </Button>
                     </div>
@@ -326,7 +286,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                
                 <div
                   className="common-pointer bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                  onClick={openModal}
+                  onClick={() => (window.location.href = " http://localhost:3003")}
                 >
                   <div className="flex flex-row gap-4 items-center justify-start w-auto">
                     <Text
@@ -358,7 +318,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                     communities effortlessly.
                   </Text>
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                  <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                  <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Explore
                       </Button>
                     </div>
@@ -368,7 +328,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
                 <div 
                 className="bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                onClick={openModal}              >
+              onClick={() => (window.location.href = " http://localhost:3001/daohomegenerator")}>
 
               
                 
@@ -404,7 +364,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                   </Text>
 
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                  <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                  <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Explore
                       </Button>
                     </div>
@@ -412,7 +372,8 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                
                 <div
                   className="common-pointer bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                  onClick={openModal}                >
+                  onClick={() => (window.location.href = " http://localhost:3003")}
+                >
                   <div className="flex flex-row gap-4 items-center justify-start w-auto">
                     <Text
                       className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -443,10 +404,10 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                     communities effortlessly.
                   </Text>
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Demo
                       </Button>
                     </div>
@@ -460,7 +421,8 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
                 <div
                 className="bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                onClick={openModal}                >
+                onClick={() => navigate("/nocodenfthomepage")}
+                >
                     <div className="flex flex-row gap-4 items-center justify-start w-auto">
                       <Text
                         className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -491,10 +453,10 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                       effortlessly.
                     </Text>
                      <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px]" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px]">
                         Demo
                       </Button>
                     </div>
@@ -504,7 +466,8 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
                 <div
                   className="common-pointer bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                  onClick={openModal}                >
+                  onClick={() => navigate("/launchpad")}
+                >
                   <div className="flex flex-row gap-4 items-center justify-start w-auto">
                     <Text
                       className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -536,10 +499,10 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                     effortless development.
                   </Text>
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Demo
                       </Button>
                     </div>
@@ -552,7 +515,8 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
               <div
                 className="bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                onClick={openModal}                >
+                onClick={() => navigate("/nocodenfthomepage")}
+                >
                     <div className="flex flex-row gap-4 items-center justify-start w-auto">
                       <Text
                         className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -583,17 +547,18 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                       effortlessly.
                     </Text>
                      <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px]" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px]">
                         Demo
                       </Button>
                     </div>
                   </div>
                 <div
                   className="common-pointer bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-green-400_7f"
-                  onClick={openModal}                >
+                  onClick={() => navigate("/launchpad")}
+                >
                   <div className="flex flex-row gap-4 items-center justify-start w-auto">
                     <Text
                       className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -625,10 +590,10 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                     effortless development.
                   </Text>
                   <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-blue-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-deep_purple-900">
                         Demo
                       </Button>
                     </div>
@@ -638,7 +603,8 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
                 <div
                 className="bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-deep_purple-900 gradient-background"
-                onClick={openModal}                >
+                onClick={() => navigate("/nocodenfthomepage")}
+                >
               <div className="flex flex-row gap-4 items-center justify-start w-auto">
                 <Text
                   className="bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12"
@@ -672,10 +638,10 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
                 </>
               </Text>
               <div className="flex flex-row gap-8 items-start justify-start w-auto">
-                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-red-900" onClick={openModal}>
+                    <Button className="bg-light_blue-500 capitalize cursor-pointer font-semibold min-w-[87px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-red-900">
                         Deploy
                       </Button>
-                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-red-900" onClick={openModal}>
+                      <Button className="bg-black-900_01 border border-light_blue-500 border-solid capitalize cursor-pointer font-semibold min-w-[85px] py-[11px] rounded-lg text-base text-center text-white-A700 tracking-[0.80px] hover:bg-red-900">
                         Demo
                       </Button>
                     </div>
@@ -692,6 +658,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
             <div
                   className="common-pointer bg-black-900_01 flex flex-1 flex-col gap-4 items-start justify-start p-8 sm:px-5 rounded-lg w-full hover:bg-deep_purple-900 gradient-background"
+                  onClick={() => navigate("/launchpad")}
                 >
               <div className="flex flex-row gap-4 items-center justify-start w-auto">
                 <Text
@@ -810,6 +777,7 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
 
 
 
+
           
      
 
@@ -819,4 +787,4 @@ Your project will be primed for deployment. Just click "deploy," proceed with th
   );
 };
 
-export default HomepagecodexappPage;
+export default HomeICP;
