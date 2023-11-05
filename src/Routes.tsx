@@ -183,7 +183,7 @@ const CreateProjectRight = React.lazy(() => import("pages/CreateProjectRight"));
 const DAOselecttesnet = React.lazy(() => import("pages/DAOselecttesnet"));
 const DAOHOMEGENERATOR = React.lazy(() => import("pages/DAOHOMEGENERATOR"));
 const Homepagecodexapp = React.lazy(() => import("pages/Homepagecodexapp"));
-const Tokengenerator = React.lazy(() => import("pages/Homepagecodexapp/tokengeneratorICP"));
+const Tokengenerator = React.lazy(() => import("pages/Homepagecodexapp/tokengeneratorERC"));
 
 const Launchpadloading = React.lazy(() => import("pages/Launchpadloading"));
 const Launchpadresult = React.lazy(() => import("pages/Launchpadresult"));
