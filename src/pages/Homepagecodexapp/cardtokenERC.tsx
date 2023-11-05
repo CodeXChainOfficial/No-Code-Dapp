@@ -77,9 +77,50 @@ const CardtokenICP = () => {
 
   const handleOpenClick = () => {
 
-    window.location.href = 'http://localhost:3002/ICP20Standard';
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20Standard';
     
   };
+  const handleOpenClick1 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20Advance';
+    
+  };
+  const handleOpenClick2 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20Vote';
+    
+  };
+  const handleOpenClick3 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20Staking';
+    
+  };
+
+  const handleOpenClick4 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20SignatureMintVote';
+    
+  };
+
+  const handleOpenClick5 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20SignatureMint';
+    
+  };
+
+  const handleOpenClick6 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20DropVote';
+    
+  };
+
+  const handleOpenClick7 = () => {
+
+    window.location.href = 'https://code-x-chain.vercel.app/ERC20Drop';
+    
+  };
+
+
 
   const handleInfoClick = () => {
     console.log("openmodal");
@@ -118,49 +159,49 @@ const CardtokenICP = () => {
             subtitle="Token Advance"
             description="Burnable DIP20, Pausable DIP20 & Mintable DIP20."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick1}
             onInfoClick={handleInfoClick}        />
              <FeatureCard
             title="TGL"
-            subtitle="Token Liquidity"
+            subtitle="Token Vote"
             description="An ICP token designed for providing liquidity in decentralized exchanges."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick2}
             onInfoClick={handleInfoClick}        />
             <FeatureCard
             title="TGG"
-            subtitle="Token Governance"
+            subtitle="Token Staking"
             description="Token holders have voting rights proportional to the number of tokens they hold."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick3}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TGV"
-            subtitle="Token Vesting"
+            subtitle="Token SignatureMintVote"
             description="This can be used for team tokens, advisors, or any situation where you want to incentivize long-term holding."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick4}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TGS"
-            subtitle="Token Staking"
+            subtitle="Token SignatureMint"
             description="Token staking allowing you lock crypto assets for a set period of time to help support the operation."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick5}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TA"
-            subtitle="Token Airdrop"
+            subtitle="Token Drop Vote"
             description="An ICP token used for distributing tokens via airdrops."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick6}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TW"
-            subtitle="Token Wrapped"
+            subtitle="Token Drop"
             description="Tokens that represent assets on another blockchain."
             buttonText="Deploy"
-            onButtonClick={handleOpenClick}
+            onButtonClick={handleOpenClick7}
             onInfoClick={handleInfoClick}        />
          
         </div>
