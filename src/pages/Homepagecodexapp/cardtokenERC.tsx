@@ -14,18 +14,7 @@ const FeatureCard = ({ title, subtitle, description, buttonText, onButtonClick, 
 
   return (
     <div className="common-pointer common-card gradient-background">
-      <img
-        src="/images/info.png"
-        alt="Info Icon"
-        className="absolute top-2 right-2 w-7 h-7"
-        onClick={onInfoClick}
-
-      />
-      <img
-        src="/images/meta.png"
-        alt="Info Icon"
-        className="absolute bottom-2 right-2 w-20 h-15"
-      />
+     
       <div className="space-card flex flex-row gap-4 items-center justify-start w-auto">
         <Text className="space-card bg-gradient  capitalize flex h-12 items-center justify-center rounded-[50%] text-base text-center text-white-A700 tracking-[0.80px] w-12" size="txtRalewayRomanSemiBold16WhiteA700">
           {title}
@@ -149,7 +138,7 @@ const CardtokenICP = () => {
           <FeatureCard
             title="TGS"
             subtitle="Token Standard"
-            description="A standard DIP20 token with basic functionality like transfer, balanceOf, and approve."
+            description="Create cryptocurrency compliant with ERC20 standard"
             buttonText="Deploy"
             onButtonClick={handleOpenClick}
             onInfoClick={handleInfoClick}        />
@@ -157,49 +146,49 @@ const CardtokenICP = () => {
           <FeatureCard
             title="TGA"
             subtitle="Token Advance"
-            description="Burnable DIP20, Pausable DIP20 & Mintable DIP20."
+            description="Burnable ERC20, Pausable ERC20, Mintable ERC20."
             buttonText="Deploy"
             onButtonClick={handleOpenClick1}
             onInfoClick={handleInfoClick}        />
              <FeatureCard
-            title="TGL"
+            title="TVT"
             subtitle="Token Vote"
-            description="An ICP token designed for providing liquidity in decentralized exchanges."
+            description="Vote using the token to shape project decisions in a decentralized organization.."
             buttonText="Deploy"
             onButtonClick={handleOpenClick2}
             onInfoClick={handleInfoClick}        />
             <FeatureCard
-            title="TGG"
+            title="TSK"
             subtitle="Token Staking"
             description="Token holders have voting rights proportional to the number of tokens they hold."
             buttonText="Deploy"
             onButtonClick={handleOpenClick3}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
-            title="TGV"
+            title="TSM"
             subtitle="Token SignatureMintVote"
-            description="This can be used for team tokens, advisors, or any situation where you want to incentivize long-term holding."
+            description="A combination of various concepts related to tokens, signatures, minting, and voting."
             buttonText="Deploy"
             onButtonClick={handleOpenClick4}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
-            title="TGS"
+            title="TSM"
             subtitle="Token SignatureMint"
-            description="Token staking allowing you lock crypto assets for a set period of time to help support the operation."
+            description="A combination of various concepts related to tokens, signatures and minting"
             buttonText="Deploy"
             onButtonClick={handleOpenClick5}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
-            title="TA"
+            title="TDV"
             subtitle="Token Drop Vote"
-            description="An ICP token used for distributing tokens via airdrops."
+            description="The distribution of tokens to individuals for free or without any cost to enable the voting process"
             buttonText="Deploy"
             onButtonClick={handleOpenClick6}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
-            title="TW"
+            title="TD"
             subtitle="Token Drop"
-            description="Tokens that represent assets on another blockchain."
+            description="The distribution of tokens to individuals for free or without any cost."
             buttonText="Deploy"
             onButtonClick={handleOpenClick7}
             onInfoClick={handleInfoClick}        />
