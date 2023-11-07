@@ -166,14 +166,14 @@ const CardtokenICP = () => {
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TSM"
-            subtitle="Token SignatureMintVote"
+            subtitle="Token Signature Mint Vote"
             description="A combination of various concepts related to tokens, signatures, minting, and voting."
             buttonText="Deploy"
             onButtonClick={handleOpenClick4}
             onInfoClick={handleInfoClick}        />
                <FeatureCard
             title="TSM"
-            subtitle="Token SignatureMint"
+            subtitle="Token Signature Mint"
             description="A combination of various concepts related to tokens, signatures and minting"
             buttonText="Deploy"
             onButtonClick={handleOpenClick5}
