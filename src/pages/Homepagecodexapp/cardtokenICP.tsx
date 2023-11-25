@@ -77,7 +77,7 @@ const CardtokenICP = () => {
 
   const handleOpenClick = () => {
 
-    window.location.href = 'http://localhost:3002/ICP20Standard';
+    window.location.href = 'https://icp-master.vercel.app/';
     
   };
 

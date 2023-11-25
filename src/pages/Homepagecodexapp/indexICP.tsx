@@ -15,7 +15,7 @@ const HomeICP: React.FC = () => {
 
 
   const handleNavigate = () => {
-    navigate('/Tokengenerator'); // Assuming '/Tokengenerator' is the route you want to navigate to
+    navigate('/TokengeneratorICP'); // Assuming '/Tokengenerator' is the route you want to navigate to
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
