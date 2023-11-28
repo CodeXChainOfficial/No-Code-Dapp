@@ -15,7 +15,7 @@ const HomeMeta: React.FC = () => {
 
 
   const handleNavigate = () => {
-    navigate('/TokengeneratorMeta'); // Assuming '/Tokengenerator' is the route you want to navigate to
+    navigate('/Tokengenerator'); // Assuming '/Tokengenerator' is the route you want to navigate to
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
